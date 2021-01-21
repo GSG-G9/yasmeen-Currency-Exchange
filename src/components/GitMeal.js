@@ -16,7 +16,12 @@ function GetCurrency() {
     <div>
       <p>Enter Meal : </p>
       <input type="text" value={search} onChange={handleChange} />
-      <p>{meal && meal.strCategory}</p>
+      {meal && (
+        <>
+          <p> meal Catagories :{meal.strCategory}</p>
+          <p>meal Instruction :{meal.strInstructions}</p>
+        </>
+      )}
     </div>
   );
 }
